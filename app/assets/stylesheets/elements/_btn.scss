@@ -1,0 +1,46 @@
+.btn {
+  @extend %font-family-primary;
+  border-radius: 3px;
+  box-shadow: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: map-get($font-weight-primary, bold);
+  line-height: 15px;
+  margin: 0;
+  padding: 10px 28px;
+  text-shadow: none;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .2);
+  transition: all .2s ease-in-out;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.btn--primary {
+  background: linear-gradient(to bottom, lighten($color-primary, 4%), $color-primary);
+  border: 1px solid darken($color-primary, 5%);
+
+  &:hover {
+    background: linear-gradient(to bottom, lighten($color-primary, 4%), lighten($color-primary, 4%));
+  }
+
+  &:active {
+    background: linear-gradient(to bottom, $color-primary, $color-primary);
+  }
+}
+
+.btn--secondary {
+  background: linear-gradient(to bottom, lighten($color-secondary, 4%), $color-secondary);
+  border: 1px solid darken($color-secondary, 5%);
+
+  &:hover {
+    background: linear-gradient(to bottom, lighten($color-secondary, 4%), lighten($color-secondary, 4%));
+  }
+
+  &:active {
+    background: linear-gradient(to bottom, $color-secondary, $color-secondary);
+  }
+}

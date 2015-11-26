@@ -1,0 +1,32 @@
+//
+// Typography
+// ==========
+//
+
+%font-family-primary {
+  font-family: Helvetica Neue, helvetica, arial, sans-serif;
+}
+
+$font-weight-primary: (
+  extra-light: 200,
+  light: 300,
+  normal: 400,
+  semi-bold: 600,
+  bold: 700
+);
+
+//
+// Colors
+// ======
+//
+
+$color-primary: #8a6fd5;
+$color-secondary: #6ec8fb;
+
+$color-pink: #f4065f;
+$color-green: #85ebc3;
+
+$color-blue: #27343d;
+$color-bright-blue: #40bad8;
+$color-light-blue: #d0eaef;
+$color-grey-blue: #f2f7f8;
