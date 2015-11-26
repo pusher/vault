@@ -6,5 +6,9 @@
 }
 
 @import 'modules/*';
-@import 'elements/*';
-@import 'components/*';
+
+@import 'components/panel';
+
+@import 'elements/buttons/btn';
+@import 'elements/buttons/primary';
+@import 'elements/buttons/secondary';
