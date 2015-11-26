@@ -66,7 +66,8 @@ body {
 .vault__title,
 .vault__raw,
 .vault__btn,
-.vault__super {
+.vault__super,
+.vault__no-results {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -150,6 +151,23 @@ body {
       left: -25px;
       display: block;
     }
+}
+
+.vault__no-results {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20px 30px;
+  text-align: center;
+  background: #f2dede;
+  border: 1px solid #ebccd1;
+  display: none;
+
+  span {
+    color: #a94442;
+    font-size: 12px;
+    font-weight: 500;
+  }
 }
 
 @import "syntax";

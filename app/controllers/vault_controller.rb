@@ -21,6 +21,18 @@ class VaultController < ActionController::Base
   def raw
     @patternname = params[:patternname]
     @type = "raw"
-    @pagetitle = params[:patternname]
+    @pageTitle = params[:patternname]
+  end
+
+
+
+
+  def show
+    @pageTitle = 'test'
+    @type = "individual"
+
+    @param = params[:path].first
+
+    abort @param.inspect
   end
 end

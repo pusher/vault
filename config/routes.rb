@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root 'vault#all'
-
   get ':type/' => 'vault#category'
 
   get ':type/:patternname/raw' => 'vault#raw'
