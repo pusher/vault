@@ -5,7 +5,7 @@ class ComponentGenerator < Rails::Generators::NamedBase
     @component_path = name.sub!(@component_name, '')
 
     create_file "app/assets/stylesheets/components/#{@component_path}/_#{@component_name}.scss", ""
-    append_file "app/assets/stylesheets/application.scss", "\n@import 'components/#{@component_path}#{@component_name};'"
+    append_file "app/assets/stylesheets/application.scss", "\n@import 'components/#{@component_path}#{@component_name}';"
     create_file "app/views/components/#{@component_path}/_#{@component_name}.html.erb", ""
   end
 end
