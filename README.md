@@ -10,6 +10,15 @@ It is a rails implementation of [Rareloop's Primer](https://github.com/Rareloop/
 - View components/elements in isolation
 - Encourages modular development (DRY)
 
+#### Creating Patterns
+Adding a new pattern is simple. Just use the built in CLI:
+
+```bash
+rails g component navigation/global/top
+```
+
+You can nest components in to folders as many levels deep as is required.
+
 #### Notes
 - Patterns (where possible (see nav)) should be free of any grid bias. Columns and rows should be added at template level, rather than pattern level.
 
