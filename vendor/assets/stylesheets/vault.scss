@@ -28,7 +28,6 @@ body {
   }
 }
 
-
 .vault__search {
   position: absolute;
   top: 0;
@@ -63,6 +62,7 @@ body {
 .vault + .vault {
   margin-top: 20px;
 }
+
 .vault__title,
 .vault__raw,
 .vault__btn,
@@ -86,6 +86,13 @@ body {
     color: #222;
     float: left;
     position: relative;
+
+    span {
+      font-size: 13px;
+      font-weight: normal;
+      font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+      color: #666;
+    }
   }
 
 }
