@@ -1,4 +1,2 @@
-<% take_raw = request.fullpath %>
-<% take_raw.slice! "/raw" %>
-<a href="<%= render :text => take_raw %>/" class="vault__btn">Back</a>
-<%= render :partial => take_raw %>
+<a href="<%= render :text => "/#{@patternType}/#{@param}" %>/" class="vault__btn">Back</a>
+<%= render :partial => "#{@patternType}/#{@param}" %>

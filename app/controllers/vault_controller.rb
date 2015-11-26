@@ -6,33 +6,23 @@ class VaultController < ActionController::Base
     @pageTitle = "All"
   end
 
-  def category
-    if params[:type] == 'elements' || params[:type] == 'components'
-      @type = params[:type]
-    end
-  end
-
-  def individual
-    @patternname = params[:patternname]
-    @type = "individual"
-    @pageTitle = params[:pattername]
-  end
-
   def raw
-    @patternname = params[:patternname]
     @type = "raw"
-    @pageTitle = params[:patternname]
+    @patternName = params[:pattern].split('/').last.titleize
+
+    # abort @patternName.inspect
+    @pageTitle = @patternName
+
+    @patternType = params[:type]
+    @param = params[:pattern]
   end
-
-
-
 
   def show
-    @pageTitle = 'test'
     @type = "individual"
+    @patternName = params[:pattern].split('/').last.titleize
+    @pageTitle = @patternName
 
-    @param = params[:path].first
-
-    abort @param.inspect
+    @patternType = params[:type]
+    @param = params[:pattern]
   end
 end
