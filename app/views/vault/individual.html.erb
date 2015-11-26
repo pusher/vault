@@ -1,0 +1,14 @@
+<div class="vault__title">
+  <h1><%= render :text => @patternname.titleize %></h1>
+  <a href="<%= request.fullpath %>/raw" class="vault__btn">View Raw</a><a href="/" class="vault__btn">Back Home</a> 
+</div>
+<div class="vault">
+  <div class="vault__content">
+    <%= render :partial => request.fullpath %>
+  </div>
+  <div class="vault__raw">
+    <%= highlight do %>  
+      <%= render :partial => request.fullpath %>
+    <% end %>
+  </div>
+</div>

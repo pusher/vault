@@ -1,0 +1,4 @@
+<% take_raw = request.fullpath %>
+<% take_raw.slice! "/raw" %>
+<a href="<%= render :text => take_raw %>/" class="pusher-vault__btn">Back</a>
+<%= render :partial => take_raw %>
