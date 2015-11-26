@@ -6,9 +6,5 @@
   <div class="vault__content">
     <%= render :partial => request.fullpath %>
   </div>
-  <div class="vault__raw">
-    <%= highlight do %>  
-      <%= render :partial => request.fullpath %>
-    <% end %>
-  </div>
+  <div class="vault__raw"><%= highlight do %><%= render :partial => request.fullpath %><% end %></div>
 </div>
