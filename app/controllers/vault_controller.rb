@@ -3,6 +3,7 @@ class VaultController < ActionController::Base
 
   def all
     @type = "all"
+    @pageTitle = "All"
   end
 
   def category
@@ -14,10 +15,12 @@ class VaultController < ActionController::Base
   def individual
     @patternname = params[:patternname]
     @type = "individual"
+    @pageTitle = params[:pattername]
   end
 
   def raw
     @patternname = params[:patternname]
     @type = "raw"
+    @pagetitle = params[:patternname]
   end
 end
