@@ -1,0 +1,155 @@
+/*
+ *= require_self
+ */
+
+// Vault Styles
+// ============
+
+%box-sizing {
+  box-sizing: border-box;
+}
+
+body {
+  @extend %box-sizing;
+  background: #f5f7f9;
+  padding: 60px 20px 20px;
+  margin: 0;
+
+  &.vault-template-raw {
+    background: #fff;
+    padding: 0;
+
+    .vault__btn {
+      top: 20px;
+      right: 20px;
+      position: fixed;
+    }
+
+  }
+}
+
+
+.vault__search {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 6px 20px;
+
+  > input {
+    width: 100%;
+    height: 60px;
+    border: none;
+    font-size: 22px;
+    color: #333;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.vault {
+  @extend %box-sizing;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e9edf1;
+  padding: 20px 30px;
+}
+
+.vault + .vault {
+  margin-top: 20px;
+}
+.vault__title,
+.vault__raw,
+.vault__btn,
+.vault__super {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.vault__title {
+  @extend %box-sizing;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  padding: 0 20px 10px;
+  overflow: auto;
+  margin-bottom: 20px;
+
+  h1 {
+    font-weight: bold;
+    font-size: 24px;
+    color: #222;
+    float: left;
+    position: relative;
+  }
+
+}
+
+.vault__super {
+  @extend %box-sizing;
+  font-size: 30px;
+  font-weight: bold;
+  color: #222;
+  margin: 40px 0;
+}
+
+.vault__btn {
+  @extend %box-sizing;
+  background: transparent;
+  border-radius: 3px;
+  border: 2px solid #888;
+  color: #888;
+  display: inline-block;
+  float: right;
+  font-size: 12px;
+  font-weight: bold;
+  height: 30x;
+  line-height: 20px;
+  margin-left: 10px;
+  padding: 7px 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  top: 10px;
+  transition: all .2s ease-in-out;
+  width: auto;
+  z-index: 10;
+
+  &:after {
+    clear: both;
+    content: '';
+  }
+
+  &:hover {
+    background: #fff;
+    border-color: #444;
+    color: #444;
+  }
+}
+
+.vault__raw {
+  @extend %box-sizing;
+  width: 100%;
+  border-radius: 4px;
+  padding: 10px 30px;
+  background: #f6f6f6;
+  margin: 50px 0;
+  overflow-x: scroll;
+
+    &:before {
+      font-size: 8px;
+      content: "SOURCE";
+      font-weight: bold;
+      color: #ddd;
+      position: relative;
+      top: -25px;
+      left: -25px;
+      display: block;
+    }
+}
+
+@import "syntax";
