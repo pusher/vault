@@ -1,0 +1,12 @@
+.btn--tertiary {
+  background: linear-gradient(to bottom, lighten($color-tertiary, 4%), $color-tertiary);
+  border: 1px solid darken($color-tertiary, 5%);
+
+  &:hover {
+    background: linear-gradient(to bottom, lighten($color-tertiary, 4%), lighten($color-tertiary, 4%));
+  }
+
+  &:active {
+    background: linear-gradient(to bottom, $color-tertiary, $color-tertiary);
+  }
+}

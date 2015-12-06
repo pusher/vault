@@ -1,0 +1,35 @@
+.signpost {
+  @extend %font-family-primary;
+
+  width: 100%;
+  min-height: 270px;
+  background: url(signpost_bg.png) #27343d no-repeat center top;
+  text-align: center;
+  padding: 90px 0;
+}
+
+.signpost__leader,
+.signpost__sub {
+  color: #f0f5f6;
+  margin: 0;
+  padding: 0;
+}
+
+.signpost__leader {
+  color: #f0f5f6;
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 30px;
+
+  span {
+    font-style: italic;
+    color: $color-tertiary;
+  }
+}
+
+.signpost__sub {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
