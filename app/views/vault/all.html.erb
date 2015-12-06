@@ -1,9 +1,26 @@
 <div class="vault__search">
-  <input type="text" class="js-sort-this" placeholder="Search patterns.." onkeyup="sortResults(this.value)">
+  <input type="text" class="js-sort-this" placeholder="Search patterns..">
 </div>
 
 <h1 class="vault__super">Elements</h1>
 <% Dir["app/views/elements/**/*.html.erb"].each do |file| %>
+  <% file_path =  File.expand_path(file, "/") %>
+  <% file_path.slice! ".html.erb" %>
+  <% file_path.slice! "/app/views" %>
+  <% file_path.slice! "_" %>
+  <div class="vault" data-element="<%= file_path %>">
+    <div class="vault__title">
+      <h1><%= File.basename(file, ".html.erb").titleize %> <span>(<%= file_path %>)</span></h1>
+      <a href="<%= render :text => file_path %>/" class="vault__btn">Isolate</a>
+    </div>
+    <div class="vault__content">
+      <%= render :file => Rails.root.join(file).to_s %>
+    </div>
+  </div>
+<% end %>
+
+<h1 class="vault__super">Components</h1>
+<% Dir["app/views/components/**/*.html.erb"].each do |file| %>
   <% file_path =  File.expand_path(file, "/") %>
   <% file_path.slice! ".html.erb" %>
   <% file_path.slice! "/app/views" %>
@@ -19,23 +36,8 @@
   </div>
 <% end %>
 
-<h1 class="vault__super">Components</h1>
-<% Dir["app/views/components/**/*.html.erb"].each do |file| %>
-  <div class="vault" data-element="<%= File.basename(file, ".html.erb").sub('_', '') %>">
-    <div class="vault__title">
-      <h1><%= File.basename(file, ".html.erb").titleize %></h1>
-      <% file_path =  File.expand_path(file, "/") %>
-      <% file_path.slice! ".html.erb" %>
-      <% file_path.slice! "/app/views" %>
-      <% file_path.slice! "_" %>
-      <a href="<%= render :text => file_path %>/" class="vault__btn">Isolate</a>
-    </div>
-    <div class="vault__content">
-      <%= render :file => Rails.root.join(file).to_s %>
-    </div>
-  </div>
-<% end %>
-
 <div class="vault__no-results">
   <span>Sorry, no patterns could be found.</span>
 </div>
+
+<%= javascript_include_tag 'vault', 'data-turbolinks-track' => true %>

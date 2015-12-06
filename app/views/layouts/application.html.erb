@@ -4,32 +4,13 @@
   <title><%= (@pageTitle.present?) ? @pageTitle + ' - Vault' : 'Vault' %></title>
   <%= stylesheet_link_tag    'vault', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body class="vault-template-<%= @type %>">
 
   <%= yield %>
-
-  <script data-turbolinks-track="true">
-    function sortResults(searchTerm) {
-      if(searchTerm) {
-        elementsHide = $(".vault:not([data-element^='" + searchTerm +"'])").hide();
-        elementsShow = $(".vault[data-element^='" + searchTerm +"']").show();
-        elementsHide.hide();
-        elementsShow.show();
-
-        if(elementsShow.length === 0) {
-          $(".vault__no-results").show();
-        } else {
-          $(".vault__no-results").hide();
-        }
-      } else {
-        $(".vault").show();
-        $(".vault__no-results").hide();
-      }
-    }
-  </script>
+  
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
 </body>
 </html>
