@@ -1,6 +1,7 @@
 (function(){
 
   var patterns = document.querySelectorAll('.vault');
+  var titles = document.querySelectorAll('.vault__super');
   var search = document.querySelectorAll('.js-sort-this')[0];
   var empty_state = document.querySelectorAll('.vault__no-results')[0];
   var pattern_array = [];
@@ -8,8 +9,6 @@
   for (var i = 0; i < patterns.length; i++) {
     var pattern = patterns[i];
     pattern_array.push(pattern.getAttribute('data-element'));
-
-    console.log(pattern_array);
   }
 
   search.addEventListener('keyup', sortPatterns);
@@ -25,14 +24,22 @@
 
 
     if(results == 0) {
-      empty_state.style.display = 'block';
+      empty_state.classList.remove('vault--hidden');
+
+      for (var i = 0; i < titles.length; i++) {
+        titles[i].classList.add('vault--hidden');
+      }
+
     } else {
-      empty_state.style.display = 'none';
+      empty_state.classList.add('vault--hidden');
+
+      for (var i = 0; i < titles.length; i++) {
+        titles[i].classList.remove('vault--hidden');
+      }
     }
 
     for (var i = 0; i < patterns.length; i++) {
       patterns[i].classList.add('vault--hidden');
-
     }
 
     for (var i = 0; i < results.length; i++) {
