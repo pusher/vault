@@ -1,0 +1,14 @@
+.form__input {
+  max-width: 400px;
+}
+
+.form__input {
+  @extend %font-family-primary;
+  width: 100%;
+  height: 40px;
+  background: #fff;
+  border: 1px solid #d4d4d4;
+  padding: 5px 20px;
+  font-size: 15px;
+  border-radius: 3px;
+}
