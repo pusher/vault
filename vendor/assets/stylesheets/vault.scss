@@ -34,15 +34,15 @@ body {
   left: 0;
   width: 100%;
   height: 70px;
-  background: #fff;
+  background: #fff url('search.svg') no-repeat 20px center;
   border-bottom: 1px solid #eee;
-  padding: 6px 20px;
+  padding: 6px 20px 6px 60px;
 
   > input {
     width: 100%;
     height: 60px;
     border: none;
-    font-size: 22px;
+    font-size: 21px;
     color: #333;
 
     &:focus {
@@ -57,6 +57,11 @@ body {
   background: #fff;
   border: 1px solid #e9edf1;
   padding: 20px 30px;
+  display: block;
+}
+
+.vault--hidden {
+  display: none;
 }
 
 .vault + .vault {

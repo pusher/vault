@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.1 (15681) - http://www.bohemiancoding.com/sketch -->
+    <title>search</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <path d="M19.6093333,17.7237333 L14.5168,12.6314667 C15.4493333,11.3232 16,9.72506667 16,8 C16,3.5888 12.4112,0 8,0 C3.5888,0 0,3.5888 0,8 C0,12.4112 3.5888,16 8,16 C9.72506667,16 11.3232,15.4493333 12.6314667,14.5168 L17.724,19.6093333 C17.984,19.8698667 18.3256,20 18.6666667,20 C19.0077333,20 19.3493333,19.8698667 19.6093333,19.6096 C20.1301333,19.0888 20.1301333,18.2445333 19.6093333,17.7237333 L19.6093333,17.7237333 Z M8,13.3333333 C5.0544,13.3333333 2.66666667,10.9456 2.66666667,8 C2.66666667,5.0544 5.0544,2.66666667 8,2.66666667 C10.9456,2.66666667 13.3333333,5.0544 13.3333333,8 C13.3333333,10.9456 10.9456,13.3333333 8,13.3333333 L8,13.3333333 Z" id="search" fill="#E1E1E1" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>
