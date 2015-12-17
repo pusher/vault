@@ -1,6 +1,6 @@
 # Vault
 
-![Vault Screenshot](https://raw.githubusercontent.com/pusher/vault/master/public/screenshot.png?token=ADk3f4aZrljr_KnWSzzWeYSVSypn75BTks5WbfrGwA%3D%3D)
+![Vault Screenshot](https://www.dropbox.com/s/k2e9wpm26a7wbhm/vault-screenshot.png?raw=1)
 
 ## Introduction
 Vault is a front-end pattern library, which holds patterns that are used across a site. Examples of patterns are navbars, buttons, and headings.
