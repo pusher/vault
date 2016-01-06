@@ -1,5 +1,5 @@
 # Vault
-A better way to manage your front-end patterns
+A better way to manage your front-end patterns - [View Demo](http://vaultdemo.herokuapp.com/)
 
 ![Vault Screenshot](https://www.dropbox.com/s/k2e9wpm26a7wbhm/vault-screenshot.png?raw=1)
 
